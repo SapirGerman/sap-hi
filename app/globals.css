@@ -1,0 +1,656 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to modern 2025-2026 cosmic palette inspired by the galaxy image */
+  --background: oklch(0.12 0.04 245); /* Deep cosmic navy - was ultra-light */
+  --foreground: oklch(0.95 0.01 240); /* Bright cosmic white - was deep navy */
+  --card: oklch(0.15 0.03 250); /* Dark cosmic card - was soft light */
+  --card-foreground: oklch(0.95 0.01 240); /* Bright white text - was deep navy */
+  --popover: oklch(0.12 0.04 245); /* Deep space popover - was ultra-light */
+  --popover-foreground: oklch(0.95 0.01 240); /* Bright white text - was deep navy */
+
+  /* Primary uses bright cosmic purple - was deep galaxy blue */
+  --primary: oklch(0.7 0.12 280); /* Bright cosmic purple */
+  --primary-foreground: oklch(0.08 0.02 245); /* Deep space navy text */
+
+  /* Secondary uses light cosmic blue - was medium cosmic blue */
+  --secondary: oklch(0.65 0.08 255); /* Light cosmic blue */
+  --secondary-foreground: oklch(0.08 0.02 245); /* Deep space navy text */
+
+  --muted: oklch(0.2 0.04 250); /* Dark cosmic muted - was light */
+  --muted-foreground: oklch(0.75 0.06 260); /* Light cosmic muted text - was dark */
+
+  /* Accent uses darker purple - was bright cosmic purple */
+  --accent: oklch(0.5 0.15 285); /* Darker cosmic purple */
+  --accent-foreground: oklch(0.95 0.01 240); /* Bright white text */
+
+  --destructive: oklch(0.6 0.22 25); /* Brighter red - was darker */
+  --destructive-foreground: oklch(0.95 0.01 240); /* Bright white text */
+  --border: oklch(0.25 0.06 250); /* Dark cosmic borders - was light */
+  --input: oklch(0.15 0.03 250); /* Dark cosmic input - was light */
+  --ring: oklch(0.7 0.12 280 / 0.6); /* Bright cosmic purple focus ring */
+
+  /* Chart colors using inverted cosmic palette */
+  --chart-1: oklch(0.7 0.12 280); /* Bright cosmic purple */
+  --chart-2: oklch(0.5 0.15 285); /* Darker purple */
+  --chart-3: oklch(0.65 0.08 255); /* Light cosmic blue */
+  --chart-4: oklch(0.8 0.06 270); /* Very light cosmic purple */
+  --chart-5: oklch(0.4 0.08 260); /* Medium cosmic */
+
+  --radius: 0.75rem; /* Increased border radius for modern 2025 look */
+
+  --sidebar: oklch(0.2 0.04 250); /* Dark cosmic sidebar - was light */
+  --sidebar-foreground: oklch(0.95 0.01 240); /* Bright white text */
+  --sidebar-primary: oklch(0.7 0.12 280); /* Bright cosmic purple */
+  --sidebar-primary-foreground: oklch(0.08 0.02 245); /* Deep space navy */
+  --sidebar-accent: oklch(0.5 0.15 285); /* Darker purple accent */
+  --sidebar-accent-foreground: oklch(0.95 0.01 240); /* Bright white text */
+  --sidebar-border: oklch(0.25 0.06 250); /* Dark cosmic borders */
+  --sidebar-ring: oklch(0.7 0.12 280 / 0.6); /* Bright cosmic purple focus ring */
+}
+
+.dark {
+  /* Dark mode now uses lighter colors - inverting the previous dark scheme */
+  --background: oklch(0.99 0.005 240); /* Ultra-light cosmic white - was deep space */
+  --foreground: oklch(0.12 0.04 245); /* Deep cosmic navy - was bright white */
+  --card: oklch(0.97 0.01 240); /* Soft cosmic card - was dark */
+  --card-foreground: oklch(0.12 0.04 245); /* Deep navy text - was bright white */
+  --popover: oklch(0.99 0.005 240); /* Ultra-light popover - was deep space */
+  --popover-foreground: oklch(0.12 0.04 245); /* Deep navy text - was bright white */
+
+  --primary: oklch(0.25 0.08 250); /* Deep galaxy blue - was bright purple */
+  --primary-foreground: oklch(0.98 0.01 240); /* Bright white text */
+
+  --secondary: oklch(0.35 0.06 255); /* Medium cosmic blue - was deep galaxy blue */
+  --secondary-foreground: oklch(0.98 0.01 240); /* Bright white text */
+
+  --muted: oklch(0.94 0.015 245); /* Light cosmic muted - was dark */
+  --muted-foreground: oklch(0.4 0.04 250); /* Cosmic muted text - was light */
+
+  --accent: oklch(0.8 0.1 275); /* Light cosmic purple - was vibrant */
+  --accent-foreground: oklch(0.12 0.04 245); /* Dark text on light accent */
+
+  --destructive: oklch(0.55 0.22 25); /* Standard red - was bright */
+  --destructive-foreground: oklch(1 0 0); /* Pure white text */
+  --border: oklch(0.88 0.02 245); /* Light cosmic borders - was dark */
+  --input: oklch(0.97 0.01 240); /* Light cosmic input - was dark */
+  --ring: oklch(0.25 0.08 250 / 0.5); /* Deep galaxy blue focus ring */
+
+  --chart-1: oklch(0.25 0.08 250); /* Deep galaxy blue */
+  --chart-2: oklch(0.8 0.1 275); /* Light cosmic purple */
+  --chart-3: oklch(0.35 0.06 255); /* Medium cosmic blue */
+  --chart-4: oklch(0.6 0.08 270); /* Medium purple */
+  --chart-5: oklch(0.9 0.04 260); /* Very light cosmic */
+
+  --sidebar: oklch(0.94 0.015 245); /* Light cosmic sidebar - was dark */
+  --sidebar-foreground: oklch(0.12 0.04 245); /* Dark sidebar text */
+  --sidebar-primary: oklch(0.25 0.08 250); /* Deep galaxy blue */
+  --sidebar-primary-foreground: oklch(0.98 0.01 240); /* Bright white text */
+  --sidebar-accent: oklch(0.8 0.1 275); /* Light cosmic purple */
+  --sidebar-accent-foreground: oklch(0.12 0.04 245); /* Dark accent text */
+  --sidebar-border: oklch(0.88 0.02 245); /* Light cosmic borders */
+  --sidebar-ring: oklch(0.25 0.08 250 / 0.5); /* Deep galaxy blue focus ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Enhanced RTL support utilities for Hebrew language with better typography and spacing */
+  .rtl {
+    direction: rtl;
+    /* Better Hebrew font stack */
+    font-family: "Segoe UI", "Arial Hebrew", "Noto Sans Hebrew", "David", "Times New Roman", sans-serif;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+
+  /* Hebrew-specific typography improvements */
+  .rtl h1,
+  .rtl h2,
+  .rtl h3,
+  .rtl h4,
+  .rtl h5,
+  .rtl h6 {
+    font-weight: 600; /* Hebrew headings look better with slightly lighter weight */
+    line-height: 1.3; /* Better line height for Hebrew text */
+  }
+
+  .rtl p,
+  .rtl span,
+  .rtl div {
+    line-height: 1.6; /* Improved readability for Hebrew text */
+  }
+
+  /* Enhanced RTL spacing utilities */
+  .rtl .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  .rtl .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: 0.75rem;
+    margin-left: 0;
+  }
+
+  .rtl .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+
+  .rtl .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    margin-right: 2rem;
+    margin-left: 0;
+  }
+
+  .rtl .divide-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 1;
+  }
+
+  /* RTL text alignment with better Hebrew support */
+  .rtl .text-left {
+    text-align: right;
+  }
+
+  .rtl .text-right {
+    text-align: left;
+  }
+
+  .rtl .text-center {
+    text-align: center; /* Center remains center */
+  }
+
+  /* Enhanced RTL margin and padding adjustments */
+  .rtl .ml-auto {
+    margin-left: unset;
+    margin-right: auto;
+  }
+
+  .rtl .mr-auto {
+    margin-right: unset;
+    margin-left: auto;
+  }
+
+  .rtl .ml-2 {
+    margin-left: unset;
+    margin-right: 0.5rem;
+  }
+
+  .rtl .mr-2 {
+    margin-right: unset;
+    margin-left: 0.5rem;
+  }
+
+  .rtl .ml-3 {
+    margin-left: unset;
+    margin-right: 0.75rem;
+  }
+
+  .rtl .mr-3 {
+    margin-right: unset;
+    margin-left: 0.75rem;
+  }
+
+  .rtl .pl-4 {
+    padding-left: unset;
+    padding-right: 1rem;
+  }
+
+  .rtl .pr-4 {
+    padding-right: unset;
+    padding-left: 1rem;
+  }
+
+  /* Enhanced RTL flex direction adjustments */
+  .rtl .flex-row {
+    flex-direction: row-reverse;
+  }
+
+  .rtl .flex-row-reverse {
+    flex-direction: row;
+  }
+
+  .rtl .sm\:flex-row {
+    flex-direction: row-reverse;
+  }
+
+  .rtl .sm\:flex-row-reverse {
+    flex-direction: row;
+  }
+
+  /* RTL border radius adjustments for Hebrew UI */
+  .rtl .rounded-l-lg {
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .rtl .rounded-r-lg {
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  /* RTL transform adjustments for icons and elements */
+  .rtl .transform-flip {
+    transform: scaleX(-1);
+  }
+
+  /* Enhanced RTL grid adjustments for complex layouts */
+  .rtl .lg\:grid-flow-col-dense {
+    grid-auto-flow: column dense;
+  }
+
+  .rtl .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .rtl .lg\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  /* RTL-specific button and interactive element styling */
+  .rtl .justify-between {
+    justify-content: space-between; /* Remains the same */
+  }
+
+  .rtl .justify-center {
+    justify-content: center; /* Remains the same */
+  }
+
+  .rtl .items-center {
+    align-items: center; /* Remains the same */
+  }
+
+  /* Hebrew-specific badge and tag styling */
+  .rtl .tracking-widest {
+    letter-spacing: 0.1em; /* Slightly reduced for Hebrew */
+  }
+
+  .rtl .tracking-wide {
+    letter-spacing: 0.05em;
+  }
+
+  /* RTL navigation and menu adjustments */
+  .rtl .order-1 {
+    order: 1;
+  }
+
+  .rtl .order-2 {
+    order: 2;
+  }
+
+  /* Hebrew text gradient support */
+  .rtl .text-cosmic-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.25 0.08 250) 0%,
+      oklch(0.6 0.15 275) 30%,
+      oklch(0.7 0.12 280) 60%,
+      oklch(0.5 0.18 285) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  /* RTL card and content layout improvements */
+  .rtl .card-header {
+    text-align: right;
+  }
+
+  .rtl .card-content {
+    text-align: right;
+  }
+
+  /* Hebrew-specific responsive adjustments */
+  @media (min-width: 768px) {
+    .rtl .md\:flex {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .rtl .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rtl .lg\:text-right {
+      text-align: right;
+    }
+  }
+
+  /* Updated cosmic gradients to reflect inverted color scheme */
+  .cosmic-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.99 0.005 240) 0% /* Ultra-light cosmic white - was deep space */,
+      oklch(0.96 0.01 245) 15% /* Soft cosmic tint */,
+      oklch(0.94 0.02 250) 30% /* Light cosmic blue */,
+      oklch(0.91 0.03 255) 45% /* Lighter cosmic blue */,
+      oklch(0.94 0.02 250) 60% /* Back to light blue */,
+      oklch(0.96 0.01 245) 80% /* Soft tint */,
+      oklch(0.99 0.005 240) 100% /* Ultra-light white */
+    );
+  }
+
+  .cosmic-gradient-light {
+    background: linear-gradient(
+      135deg,
+      oklch(0.08 0.02 245) 0% /* Deep space navy - was ultra-light */,
+      oklch(0.1 0.03 248) 20% /* Darker cosmic blue */,
+      oklch(0.15 0.05 252) 40% /* Medium galaxy blue */,
+      oklch(0.2 0.07 258) 60% /* Lighter cosmic blue */,
+      oklch(0.15 0.05 252) 80% /* Back to medium galaxy blue */,
+      oklch(0.08 0.02 245) 100% /* Deep space navy */
+    );
+  }
+
+  .cosmic-hero-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.99 0.005 240) 0% /* Ultra-light cosmic white - was deep space */,
+      oklch(0.97 0.01 245) 12% /* Soft cosmic tint */,
+      oklch(0.94 0.02 250) 25% /* Light cosmic blue */,
+      oklch(0.9 0.03 255) 38% /* Medium light blue */,
+      oklch(0.86 0.04 260) 50% /* Lighter cosmic blue */,
+      oklch(0.9 0.03 255) 62% /* Back to medium light blue */,
+      oklch(0.94 0.02 250) 75% /* Light cosmic blue */,
+      oklch(0.97 0.01 245) 88% /* Soft tint */,
+      oklch(0.99 0.005 240) 100% /* Ultra-light white */
+    );
+  }
+
+  .cosmic-accent-gradient {
+    background: linear-gradient(
+      90deg,
+      oklch(0.7 0.12 280) 0% /* Bright cosmic purple */,
+      oklch(0.75 0.15 285) 20% /* Vibrant purple */,
+      oklch(0.8 0.1 275) 40% /* Light cosmic purple */,
+      oklch(0.85 0.08 270) 60% /* Medium purple */,
+      oklch(0.8 0.1 275) 80% /* Back to light cosmic purple */,
+      oklch(0.7 0.12 280) 100% /* Bright cosmic purple */
+    );
+  }
+
+  /* Added new modern 2025 utility classes */
+  .glass-effect {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: oklch(0.12 0.03 250 / 0.85);
+    border: 1px solid oklch(0.25 0.06 250 / 0.3);
+  }
+
+  .dark .glass-effect {
+    background: oklch(0.95 0.01 240 / 0.85);
+    border: 1px solid oklch(0.88 0.02 245 / 0.3);
+  }
+
+  .cosmic-glow {
+    box-shadow: 0 0 20px oklch(0.7 0.12 280 / 0.2), 0 0 40px oklch(0.7 0.12 280 / 0.15), 0 0 80px
+      oklch(0.7 0.12 280 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .cosmic-glow:hover {
+    box-shadow: 0 0 30px oklch(0.7 0.12 280 / 0.3), 0 0 60px oklch(0.7 0.12 280 / 0.2), 0 0 120px
+      oklch(0.7 0.12 280 / 0.15);
+  }
+
+  .text-cosmic-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.25 0.08 250) 0%,
+      oklch(0.6 0.15 275) 30%,
+      oklch(0.7 0.12 280) 60%,
+      oklch(0.5 0.18 285) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .cosmic-contact-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.08 0.02 245) 0%,
+      oklch(0.12 0.04 250) 25%,
+      oklch(0.18 0.06 255) 50%,
+      oklch(0.12 0.04 250) 75%,
+      oklch(0.08 0.02 245) 100%
+    ) !important;
+  }
+
+  .contact-dark-bg {
+    background-color: oklch(0.08 0.02 245) !important;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px oklch(0.7 0.12 280 / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px oklch(0.7 0.12 280 / 0.4);
+    }
+  }
+
+  /* High contrast mode */
+  .high-contrast {
+    --background: #000000;
+    --foreground: #ffffff;
+    --card: #1a1a1a;
+    --card-foreground: #ffffff;
+    --primary: #ffffff;
+    --primary-foreground: #000000;
+    --secondary: #333333;
+    --secondary-foreground: #ffffff;
+    --muted: #2a2a2a;
+    --muted-foreground: #cccccc;
+    --accent: #ffff00;
+    --accent-foreground: #000000;
+    --border: #ffffff;
+    --input: #1a1a1a;
+  }
+
+  .high-contrast * {
+    border-color: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .high-contrast .glass-effect {
+    background: #000000 !important;
+    backdrop-filter: none !important;
+    border: 2px solid #ffffff !important;
+  }
+
+  /* Reduced motion preferences */
+  .reduce-motion *,
+  .reduce-motion *::before,
+  .reduce-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reduce-motion .hover-lift:hover {
+    transform: none !important;
+  }
+
+  .reduce-motion .cosmic-glow,
+  .reduce-motion .pulse-glow {
+    animation: none !important;
+  }
+
+  /* Screen reader mode enhancements */
+  .screen-reader-mode .sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.25rem 0.5rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    background: var(--accent) !important;
+    color: var(--accent-foreground) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0.25rem !important;
+  }
+
+  .screen-reader-mode [aria-hidden="true"] {
+    display: none !important;
+  }
+
+  /* Enhanced focus indicators for accessibility */
+  *:focus-visible {
+    outline: 3px solid var(--ring) !important;
+    outline-offset: 2px !important;
+    border-radius: 0.25rem !important;
+  }
+
+  /* Skip link styling */
+  .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .sr-only:focus,
+  .sr-only:active {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+  }
+
+  /* Improved button and interactive element accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--ring) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Enhanced text readability */
+  @media (prefers-reduced-motion: reduce) {
+    .reduce-motion *,
+    .reduce-motion *::before,
+    .reduce-motion *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @media (prefers-contrast: high) {
+    :root {
+      --background: #000000;
+      --foreground: #ffffff;
+      --border: #ffffff;
+    }
+  }
+
+  /* Ensure minimum touch target sizes for mobile accessibility */
+  @media (max-width: 768px) {
+    button,
+    a,
+    input,
+    select {
+      min-height: 44px !important;
+      min-width: 44px !important;
+    }
+  }
+}
