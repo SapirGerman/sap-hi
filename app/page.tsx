@@ -18,6 +18,7 @@ import {
   Accessibility,
 } from "lucide-react"
 import { useState, useEffect } from "react"
+import { VideoIntroOverlay } from "@/components/video-intro-overlay"
 
 const translations = {
   en: {
@@ -32,7 +33,7 @@ const translations = {
       badge: "#HIRING",
       title: "GenAI all the way and beyond",
       subtitle:
-        "Blending cutting-edge AI with genuine human connection. I help organizations hire the right talent by combining advanced generative AI tools with high-touch conversations that reveal true fit.",
+        "Transforming recruitment with cutting-edge AI technology and human intelligence. I help organizations find the right talent using advanced generative AI solutions and data-driven insights.",
       connect: "Let's Connect",
       linkedin: "View LinkedIn",
     },
@@ -157,6 +158,12 @@ const translations = {
       services: "Services",
       contact: "Contact",
       copyright: "© 2025 Sap.Hi. All rights reserved. | Human intelligence • GenAI all the way and beyond.",
+      serviceLinks: {
+        aiStrategy: "AI Strategy",
+        talentAcquisition: "Talent Acquisition",
+        executiveSearch: "Executive Search",
+        teamBuilding: "Team Building",
+      },
     },
     trustedBy: {
       title: "Trusted by Leading Companies",
@@ -621,6 +628,8 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "rtl" : "ltr"}`}>
+      <VideoIntroOverlay />
+
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -694,7 +703,7 @@ export default function Home() {
                   className={`text-xs px-2 py-1 h-7 font-medium transition-all duration-200 ${
                     language === "en"
                       ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-primary/5"
                   }`}
                   onClick={() => setLanguage("en")}
                 >
@@ -706,7 +715,7 @@ export default function Home() {
                   className={`text-xs px-2 py-1 h-7 font-medium transition-all duration-200 ${
                     language === "he"
                       ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-primary/5"
                   }`}
                   onClick={() => setLanguage("he")}
                 >
@@ -714,7 +723,7 @@ export default function Home() {
                 </Button>
               </div>
               <Button
-                className={`bg-primary hover:bg-primary/90 ${isRTL ? "order-1" : ""}`}
+                className={`bg-primary hover:bg-primary/90 text-primary-foreground ${isRTL ? "order-1" : ""}`}
                 onClick={() => scrollToSection("contact")}
               >
                 {t.nav.getStarted}
@@ -725,29 +734,29 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-40 cosmic-gradient-light dark:cosmic-hero-gradient overflow-hidden">
+      <section className="relative py-16 sm:py-20 md:py-24 lg:py-40 cosmic-gradient-light dark:cosmic-hero-gradient overflow-hidden">
         <div className="absolute inset-0 opacity-20 dark:opacity-30">
           <img src="/cosmic-background.png" alt="" className="w-full h-full object-cover mix-blend-overlay" />
         </div>
-        <div className="absolute inset-0 opacity-10 dark:opacity-20">
+        <div className="absolute inset-0 opacity-20">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, #8244cb 1px, transparent 1px),
-                             radial-gradient(circle at 75% 75%, #8244cb 1px, transparent 1px),
-                             radial-gradient(circle at 50% 10%, #8244cb 0.5px, transparent 0.5px),
-                             radial-gradient(circle at 10% 60%, #8244cb 0.5px, transparent 0.5px),
-                             radial-gradient(circle at 90% 40%, #8244cb 0.5px, transparent 0.5px)`,
-              backgroundSize: "120px 120px, 100px 100px, 80px 80px, 140px 140px, 110px 110px",
+              backgroundImage: `radial-gradient(circle at 20% 80%, #8244cb 1px, transparent 1px),
+                             radial-gradient(circle at 80% 20%, #a855f7 1px, transparent 1px),
+                             radial-gradient(circle at 40% 40%, #8244cb 0.5px, transparent 0.5px)`,
+              backgroundSize: "100px 100px, 120px 120px, 80px 80px",
             }}
           ></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className={`grid lg:grid-cols-2 gap-16 items-center ${isRTL ? "lg:grid-flow-col-dense" : ""}`}>
-            <div className={`space-y-10 ${isRTL ? "lg:col-start-2 text-right" : ""}`}>
-              <div className="space-y-6">
+          <div
+            className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center ${isRTL ? "lg:grid-flow-col-dense" : ""}`}
+          >
+            <div className={`space-y-6 md:space-y-8 lg:space-y-10 ${isRTL ? "lg:col-start-2 text-right" : ""}`}>
+              <div className="space-y-4 md:space-y-6">
                 <div
-                  className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold tracking-widest backdrop-blur-sm border hover-lift pulse-glow ${isRTL ? "flex-row-reverse" : ""}`}
+                  className={`inline-flex items-center px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-semibold tracking-widest backdrop-blur-sm border hover-lift pulse-glow ${isRTL ? "flex-row-reverse" : ""}`}
                   style={{
                     background: "linear-gradient(135deg, #8244cb 0%, #a855f7 100%)",
                     color: "#ffffff",
@@ -763,7 +772,7 @@ export default function Home() {
                 >
                   {t.hero.badge}
                 </div>
-                <h1 className="text-5xl lg:text-7xl font-bold text-foreground text-balance leading-tight text-left">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground text-balance leading-tight text-left">
                   {language === "en" ? (
                     <>
                       GenAI all the way and <span className="text-cosmic-gradient">beyond</span>
@@ -772,29 +781,39 @@ export default function Home() {
                     <>{t.hero.title}</>
                   )}
                 </h1>
-                <p className="text-xl lg:text-2xl text-muted-foreground text-pretty max-w-2xl leading-relaxed text-left">
+                <p className="text-lg sm:text-xl md:text-xl lg:text-2xl text-muted-foreground text-pretty max-w-2xl leading-relaxed text-left">
                   {t.hero.subtitle}
                 </p>
               </div>
-              <div className={`flex flex-col sm:flex-row gap-6 ${isRTL ? "sm:flex-row-reverse" : ""}`}>
+              <div className={`flex flex-col sm:flex-row gap-4 md:gap-6 ${isRTL ? "sm:flex-row-reverse" : ""}`}>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 cosmic-glow hover-lift transition-all duration-300 text-lg px-8 py-4"
+                  className="bg-primary hover:bg-primary/90 cosmic-glow hover-lift transition-all duration-300 text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto"
                   asChild
                 >
-                  <a href="mailto:sappir2000@gmail.com">
-                    <Mail className={`h-6 w-6 ${isRTL ? "ml-3" : "mr-3"}`} />
+                  <a
+                    href="mailto:sappir2000@gmail.com"
+                    style={{ touchAction: "manipulation" }}
+                    onClick={(e) => {
+                      // Ensure mailto works on all platforms including Mac
+                      if (typeof window !== "undefined") {
+                        e.preventDefault()
+                        window.location.href = "mailto:sappir2000@gmail.com"
+                      }
+                    }}
+                  >
+                    <Mail className={`h-5 w-5 md:h-6 md:w-6 ${isRTL ? "ml-2 md:ml-3" : "mr-2 md:mr-3"}`} />
                     {t.hero.connect}
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="glass-effect border-primary/30 hover:bg-primary/10 bg-transparent hover-lift text-lg px-8 py-4"
+                  className="glass-effect border-primary/30 hover:bg-primary/10 bg-transparent hover-lift text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://linkedin.com/in/sapir-german-705ba41b3" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className={`h-6 w-6 ${isRTL ? "ml-3" : "mr-3"}`} />
+                    <Linkedin className={`h-5 w-5 md:h-6 md:w-6 ${isRTL ? "ml-2 md:ml-3" : "mr-2 md:mr-3"}`} />
                     {t.hero.linkedin}
                   </a>
                 </Button>
@@ -802,7 +821,7 @@ export default function Home() {
             </div>
             <div className={`relative ${isRTL ? "lg:col-start-1" : ""}`}>
               <div className="relative z-10">
-                <div className="relative w-96 h-96 mx-auto">
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mx-auto">
                   <img
                     src="/sapir-german-headshot.png"
                     alt="Sapir German"
@@ -817,45 +836,51 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 cosmic-gradient-light dark:bg-muted/20">
+      <section id="about" className="py-16 md:py-20 lg:py-24 cosmic-gradient-light dark:bg-muted/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-20 ${isRTL ? "text-right" : ""}`}>
-            <h2 className="text-4xl lg:text-5xl font-bold text-cosmic-gradient mb-6 text-balance">{t.about.title}</h2>
+          <div className={`text-center mb-12 md:mb-16 lg:mb-20 ${isRTL ? "text-right" : ""}`}>
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-cosmic-gradient mb-4 md:mb-6 text-balance">
+              {t.about.title}
+            </h2>
             <p
-              className={`text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty leading-relaxed text-center ${isRTL ? "text-right" : ""}`}
+              className={`text-lg sm:text-xl md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty leading-relaxed text-center ${isRTL ? "text-right" : ""}`}
             >
               {t.about.subtitle}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 hover:cosmic-glow hover-lift group">
-              <CardHeader className={`pb-8 ${isRTL ? "text-right" : ""}`}>
+              <CardHeader className={`pb-6 md:pb-8 ${isRTL ? "text-right" : ""}`}>
                 <Brain
-                  className={`h-14 w-14 text-primary mb-6 group-hover:scale-110 transition-transform duration-300 ${isRTL ? "mr-auto" : ""}`}
+                  className={`h-12 w-12 md:h-14 md:w-14 text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ${isRTL ? "mr-auto" : ""}`}
                 />
-                <CardTitle className="text-cosmic-gradient text-xl">{t.about.genai}</CardTitle>
-                <CardDescription className="leading-relaxed text-lg">{t.about.genaiDesc}</CardDescription>
+                <CardTitle className="text-cosmic-gradient text-lg md:text-xl">{t.about.genai}</CardTitle>
+                <CardDescription className="leading-relaxed text-base md:text-lg">{t.about.genaiDesc}</CardDescription>
               </CardHeader>
             </Card>
 
             <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 hover:cosmic-glow hover-lift group">
-              <CardHeader className={`pb-8 ${isRTL ? "text-right" : ""}`}>
+              <CardHeader className={`pb-6 md:pb-8 ${isRTL ? "text-right" : ""}`}>
                 <Users
-                  className={`h-14 w-14 text-primary mb-6 group-hover:scale-110 transition-transform duration-300 ${isRTL ? "mr-auto" : ""}`}
+                  className={`h-12 w-12 md:h-14 md:w-14 text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ${isRTL ? "mr-auto" : ""}`}
                 />
-                <CardTitle className="text-cosmic-gradient text-xl">{t.about.strategic}</CardTitle>
-                <CardDescription className="leading-relaxed text-lg">{t.about.strategicDesc}</CardDescription>
+                <CardTitle className="text-cosmic-gradient text-lg md:text-xl">{t.about.strategic}</CardTitle>
+                <CardDescription className="leading-relaxed text-base md:text-lg">
+                  {t.about.strategicDesc}
+                </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 hover:cosmic-glow hover-lift group">
-              <CardHeader className={`pb-8 ${isRTL ? "text-right" : ""}`}>
+            <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 hover:cosmic-glow hover-lift group sm:col-span-2 md:col-span-1">
+              <CardHeader className={`pb-6 md:pb-8 ${isRTL ? "text-right" : ""}`}>
                 <Target
-                  className={`h-14 w-14 text-primary mb-6 group-hover:scale-110 transition-transform duration-300 ${isRTL ? "mr-auto" : ""}`}
+                  className={`h-12 w-12 md:h-14 md:w-14 text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 ${isRTL ? "mr-auto" : ""}`}
                 />
-                <CardTitle className="text-cosmic-gradient text-xl">{t.about.results}</CardTitle>
-                <CardDescription className="leading-relaxed text-lg">{t.about.resultsDesc}</CardDescription>
+                <CardTitle className="text-cosmic-gradient text-lg md:text-xl">{t.about.results}</CardTitle>
+                <CardDescription className="leading-relaxed text-base md:text-lg">
+                  {t.about.resultsDesc}
+                </CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -863,20 +888,24 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20">
+      <section id="services" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 ${isRTL ? "text-right" : ""}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">{t.services.title}</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">{t.services.subtitle}</p>
+          <div className={`text-center mb-12 md:mb-16 ${isRTL ? "text-right" : ""}`}>
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              {t.services.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+              {t.services.subtitle}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {t.services.servicesList.map((service, index) => (
               <Card key={index} className="glass-effect">
-                <CardContent className="p-6">
+                <CardContent className="p-4 md:p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-primary" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Zap className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                     </div>
                     <h3 className={`text-xl font-semibold text-foreground ${isRTL ? "hebrew-text" : ""}`}>
                       {service.title}
@@ -901,17 +930,23 @@ export default function Home() {
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="py-20 bg-muted/30">
+      <section id="expertise" className="py-16 md:py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 ${isRTL ? "text-right" : ""}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">{t.expertise.title}</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">{t.expertise.subtitle}</p>
+          <div className={`text-center mb-12 md:mb-16 ${isRTL ? "text-right" : ""}`}>
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              {t.expertise.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+              {t.expertise.subtitle}
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             <div className={isRTL ? "text-right" : ""}>
-              <h3 className="text-2xl font-bold text-foreground mb-6 text-left">{t.expertise.industries}</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-left">
+                {t.expertise.industries}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 {(language === "he"
                   ? t.expertise.industriesList
                   : [
@@ -926,16 +961,18 @@ export default function Home() {
                     ]
                 ).map((industry, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <Zap className="h-4 w-4 text-accent" />
-                    <span className="text-muted-foreground">{industry}</span>
+                    <Zap className="h-4 w-4 text-accent flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">{industry}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className={isRTL ? "text-right" : ""}>
-              <h3 className="text-2xl font-bold text-foreground mb-6 text-left">{t.expertise.technologies}</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-left">
+                {t.expertise.technologies}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 {(language === "he"
                   ? t.expertise.techList
                   : [
@@ -950,8 +987,8 @@ export default function Home() {
                     ]
                 ).map((tech, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <Brain className="h-4 w-4 text-primary" />
-                    <span className="text-muted-foreground">{tech}</span>
+                    <Brain className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">{tech}</span>
                   </div>
                 ))}
               </div>
@@ -961,23 +998,27 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 ${isRTL ? "text-right" : ""}`}>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">{t.testimonials.title}</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">{t.testimonials.subtitle}</p>
+          <div className={`text-center mb-12 md:mb-16 ${isRTL ? "text-right" : ""}`}>
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              {t.testimonials.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+              {t.testimonials.subtitle}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {t.testimonials.testimonials.map((testimonial, index) => (
               <Card
                 key={index}
                 className="border-primary/20 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
               >
-                <CardContent className={`pt-6 ${isRTL ? "text-right" : ""}`}>
+                <CardContent className={`pt-4 md:pt-6 ${isRTL ? "text-right" : ""}`}>
                   <div className={`flex mb-4 text-right ${isRTL ? "flex-row-reverse" : ""}`}>
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-accent fill-current" />
+                      <Star key={i} className="h-4 w-4 md:h-5 md:w-5 text-accent fill-current" />
                     ))}
                   </div>
                   <blockquote
@@ -1003,15 +1044,23 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-32 cosmic-contact-gradient contact-dark-bg text-white relative overflow-hidden"
+        className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden"
+        style={{
+          background: `
+            radial-gradient(circle at 20% 80%, rgba(130, 68, 203, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+            linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)
+          `,
+        }}
       >
         <div className="absolute inset-0 opacity-30">
           <img src="/cosmic-background.png" alt="" className="w-full h-full object-cover mix-blend-overlay" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 text-background bg-popover"
             style={{
               backgroundImage: `radial-gradient(circle at 20% 80%, #8244cb 1px, transparent 1px),
                              radial-gradient(circle at 80% 20%, #a855f7 1px, transparent 1px),
@@ -1024,9 +1073,9 @@ export default function Home() {
         <div
           className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 ${isRTL ? "text-right" : ""}`}
         >
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h2 className="text-5xl lg:text-6xl font-bold text-balance text-white leading-tight">
+          <div className="space-y-6 md:space-y-8">
+            <div className="space-y-4 md:space-y-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-white leading-tight">
                 {language === "en" ? (
                   <>
                     Ready to Transform Your{" "}
@@ -1046,32 +1095,32 @@ export default function Home() {
                   <>{t.contact.title}</>
                 )}
               </h2>
-              <p className="text-xl lg:text-2xl max-w-4xl mx-auto text-pretty leading-relaxed text-white/90">
+              <p className="text-lg sm:text-xl md:text-xl lg:text-2xl max-w-4xl mx-auto text-pretty leading-relaxed text-white/90">
                 {t.contact.subtitle}
               </p>
             </div>
 
             <div
-              className={`flex flex-col sm:flex-row gap-8 justify-center items-center pt-8 ${isRTL ? "sm:flex-row-reverse" : ""}`}
+              className={`flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center pt-6 md:pt-8 ${isRTL ? "sm:flex-row-reverse" : ""}`}
             >
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-white/95 hover:scale-105 transition-all duration-300 text-lg px-10 py-5 rounded-xl shadow-2xl hover:shadow-white/20 font-semibold"
+                className="bg-white text-primary hover:bg-white/95 hover:scale-105 transition-all duration-300 text-base md:text-lg px-8 md:px-10 py-4 md:py-5 rounded-xl shadow-2xl hover:shadow-white/20 font-semibold w-full sm:w-auto"
                 asChild
               >
                 <a href="mailto:sappir2000@gmail.com">
-                  <Mail className={`h-6 w-6 ${isRTL ? "ml-3" : "mr-3"}`} />
+                  <Mail className={`h-5 w-5 md:h-6 md:w-6 ${isRTL ? "ml-2 md:ml-3" : "mr-2 md:mr-3"}`} />
                   {t.contact.schedule}
                 </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white bg-white text-primary hover:bg-white/90 hover:text-primary hover:scale-105 transition-all duration-300 text-lg px-10 py-5 rounded-xl backdrop-blur-sm font-semibold"
+                className="border-2 border-white bg-white text-primary hover:bg-white/90 hover:text-primary hover:scale-105 transition-all duration-300 text-base md:text-lg px-8 md:px-10 py-4 md:py-5 rounded-xl backdrop-blur-sm font-semibold w-full sm:w-auto"
                 asChild
               >
                 <a href="tel:+972547557843">
-                  <Phone className={`h-6 w-6 ${isRTL ? "ml-3" : "mr-3"}`} />
+                  <Phone className={`h-5 w-5 md:h-6 md:w-6 ${isRTL ? "ml-2 md:ml-3" : "mr-2 md:mr-3"}`} />
                   {t.contact.call}
                 </a>
               </Button>
@@ -1081,38 +1130,32 @@ export default function Home() {
       </section>
 
       {/*  Added trusted companies section above footer */}
-      <section className="py-16 bg-foreground dark:bg-background">
+      <section className="py-12 md:py-16 bg-foreground dark:bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-background dark:text-foreground mb-4">{t.trustedBy.title}</h2>
-            <p className="text-lg text-background/70 dark:text-muted-foreground max-w-2xl mx-auto">
-              {t.trustedBy.description}
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-background dark:text-foreground mb-4">
+              {t.trustedBy.title}
+            </h2>
+            <p className="text-base md:text-lg text-background/70 dark:text-muted-foreground max-w-2xl mx-auto">
+              {t.trustedBy.subtitle}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            <div className="flex items-center justify-center h-16 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-OptiGroup-logo-I2OBKpPu5K6PLWdQ6ts9A0hnBqwEZA.png"
-                alt="OptiGroup"
-                className="max-h-12 max-w-full object-contain mix-blend-multiply"
-                style={{ background: "transparent" }}
-              />
-            </div>
-            <div className="flex items-center justify-center h-16 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-100">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center justify-items-center">
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-100">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-silverfort-logo-VSCyyQ49angFBuJSH6k37TxV9ztpCH.png"
                 alt="Silverfort"
-                className="max-h-12 max-w-full object-contain mix-blend-multiply"
+                className="max-h-10 md:max-h-12 w-auto object-contain mix-blend-multiply"
                 style={{ background: "transparent" }}
               />
             </div>
-            <div className="flex items-center justify-center h-16 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-200">
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-200">
               <svg
                 width="120"
                 height="48"
                 viewBox="0 0 120 48"
-                className="max-h-12 max-w-full"
+                className="max-h-10 md:max-h-12 w-auto"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {/* Lightning bolt icon */}
@@ -1133,30 +1176,30 @@ export default function Home() {
                 </text>
               </svg>
             </div>
-            <div className="flex items-center justify-center h-16 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-300">
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-300">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-monday-logo-GFe2I0AMce31Q2ihNfrafICb7HneZt.png"
                 alt="Monday.com"
-                className="max-h-12 max-w-full object-contain mix-blend-multiply"
+                className="max-h-10 md:max-h-12 w-auto object-contain mix-blend-multiply"
                 style={{ background: "transparent" }}
               />
             </div>
-            <div className="flex items-center justify-center h-16 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-400">
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-400">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-lightricks-logo-r2iO7Vk530ySZPcLq7FtnzFPJlSEQf.png"
                 alt="Lightricks"
-                className="max-h-12 max-w-full object-contain mix-blend-multiply"
+                className="max-h-10 md:max-h-12 w-auto object-contain mix-blend-multiply"
                 style={{ background: "transparent" }}
               />
             </div>
-            <div className="flex items-center justify-center h-16 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-500">
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-500">
               <svg
                 width="120"
                 height="48"
                 viewBox="0 0 120 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="max-h-12 max-w-full"
+                className="max-h-10 md:max-h-12 w-auto"
               >
                 {/* Blue background blocks */}
                 <rect x="0" y="0" width="30" height="24" fill="#0066CC" />
@@ -1189,24 +1232,28 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="cosmic-gradient-light dark:cosmic-gradient py-12">
+      <footer className="cosmic-gradient-light dark:cosmic-gradient py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="col-span-2 text-left">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="col-span-full sm:col-span-2 text-left">
               <div
                 className={`flex items-center space-x-3 rtl:space-x-reverse mb-4 ${isRTL ? "flex-row-reverse" : ""}`}
               >
-                <img src="/sapir-logo.png" alt="Sapir German Logo" className="h-8 w-8" />
-                <span className="font-bold text-xl text-foreground">Sap.Hi</span>
+                <img src="/sapir-logo.png" alt="Sapir German Logo" className="h-6 w-6 md:h-8 md:w-8" />
+                <span className="font-bold text-lg md:text-xl text-foreground">Sap.Hi</span>
               </div>
-              <p className={`text-muted-foreground mb-4 text-pretty text-left ${isRTL ? "text-right" : ""}`}>
+              <p
+                className={`text-sm md:text-base text-muted-foreground mb-4 text-pretty text-left ${isRTL ? "text-right" : ""}`}
+              >
                 {t.footer.description}
               </p>
             </div>
 
             <div className={isRTL ? "text-right" : ""}>
-              <h3 className="font-semibold text-foreground mb-4 text-left">{t.footer.services}</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground text-left">
+              <h3 className="font-semibold text-sm md:text-base text-foreground mb-3 md:mb-4 text-left">
+                {t.footer.services}
+              </h3>
+              <ul className="space-y-2 text-xs md:text-sm text-muted-foreground text-left">
                 <li>
                   <a
                     href="#services"
@@ -1259,8 +1306,10 @@ export default function Home() {
             </div>
 
             <div className={isRTL ? "text-right" : ""}>
-              <h3 className="font-semibold text-foreground mb-4 text-center">{t.footer.contact}</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground text-center">
+              <h3 className="font-semibold text-sm md:text-base text-foreground mb-3 md:mb-4 text-center">
+                {t.footer.contact}
+              </h3>
+              <ul className="space-y-2 text-xs md:text-sm text-muted-foreground text-center">
                 <li>
                   <a href="mailto:sappir2000@gmail.com" className="hover:text-primary transition-colors">
                     sappir2000@gmail.com

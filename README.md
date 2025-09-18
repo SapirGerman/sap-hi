@@ -25,19 +25,38 @@ A modern, cosmic-themed website for Sapir German, an AI recruitment specialist. 
 
 ## 📁 Project Structure
 
+```
 ├── app/
-│   ├── globals.css          # Global styles and design tokens
-│   ├── layout.tsx           # Root layout with theme provider
-│   └── page.tsx             # Main landing page
+│   ├── globals.css           # Global styles and design tokens
+│   ├── layout.tsx            # Root layout with theme provider
+│   └── page.tsx              # Main landing page
 ├── components/
-│   ├── ui/                  # shadcn/ui components
-│   └── theme-provider.tsx   # Dark/light theme provider
+│   ├── ui/                   # shadcn/ui components
+│   │   ├── button.tsx        # Button component
+│   │   └── card.tsx          # Card component
+│   ├── theme-provider.tsx    # Dark/light theme provider
+│   └── video-intro-overlay.tsx # Video intro overlay component
 ├── lib/
-│   └── utils.ts             # Utility functions
+│   └── utils.ts              # Utility functions
+├── styles/
+│   └── globals.css           # Additional global styles
+├── components.json           # shadcn/ui configuration
+├── next.config.mjs           # Next.js configuration
+├── package.json              # Project dependencies
+├── postcss.config.mjs        # PostCSS configuration
+├── tsconfig.json             # TypeScript configuration
 └── public/
-    ├── sapir-logo.png       # Brand logo
-    ├── sapir-german-headshot.png  # Professional photo
-    └── cosmic-background.png      # Space background
+    ├── sapir-logo.png        # Brand logo
+    ├── sapir-german-headshot.png
+    ├── cosmic-background.png
+    ├── favicon.png           # Site favicon
+    ├── placeholder-logo.png
+    ├── placeholder-logo.svg
+    ├── placeholder-user.jpg
+    ├── placeholder.jpg
+    ├── placeholder.svg
+    └── professional-woman-ai-consultant-headshot.jpg
+```
 
 ## 🎨 Design System
 
@@ -61,31 +80,31 @@ A modern, cosmic-themed website for Sapir German, an AI recruitment specialist. 
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/mldktech/sap-hi.git
+```bash
+git clone https://github.com/SapirGerman/sap-hi.git
 cd sap-hi
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. Run the development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ### Development Commands
 
-\`\`\`bash
+```bash
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
-\`\`\`
+```
 
 ## 📱 Responsive Breakpoints
 
@@ -134,20 +153,45 @@ npm run lint         # Run ESLint
 
 Your project is live at:
 
-**[https://vercel.com/mldkmsg-2276s-projects/v0-sapir-german-clone](https://vercel.com/mldkmsg-2276s-projects/v0-sapir-german-clone)**
+**[https://www.sapirgerman.com](https://www.sapirgerman.com)**
 
 ## Build your app
 
 Continue building your app on:
 
-**[https://v0.app/chat/projects/qA2xuzn3K36](https://v0.app/chat/projects/qA2xuzn3K36)**
+**[https://github.com/mldktech/sap-hi](https://github.com/SapirGerman/sap-hi.git)**
 
 ## How It Works
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
+1. Create and modify your project using [MLDK.tech](https://mldk.tech)
+2. Deploy will MLDK.tech your project from the MLDK.tech interface
 3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+4. MLDK.tech deploys the latest version from this repository
+
+## 🚀 Ready to Transform Your Business?
+
+### Let's Innovate Together with MLDK.tech
+
+This project was built using the powerful MLDK.tech platform - your gateway to advanced AI automation and business innovation. Just like this stunning cosmic-themed website for Sapir German, MLDK.tech empowers you to:
+
+- **Boost Efficiency** with advanced AI systems tailored to your business needs
+- **Automate Complex Processes** using cutting-edge artificial intelligence
+- **Scale Your Operations** with intelligent solutions that grow with you
+- **Innovate Faster** with our comprehensive development platform
+
+### Connect With Us Today
+
+Ready to take your business to the next level? Our team of AI experts is here to help you harness the power of artificial intelligence.
+
+**📍 Location**: Jerusalem, Israel  
+**🕒 Hours**: Mon-Fri: 9AM-6PM  
+**📧 Contact**: [Get in touch with our team](https://mldk.tech/contact)
+
+Whether you need custom AI solutions, business automation, or want to build your own innovative platform like this one, [MLDK.tech](https://mldk.tech) is your partner in digital transformation.
+
+*"Human intelligence • GenAI all the way and beyond."*
+
+---
 
 ## 📄 License
 
