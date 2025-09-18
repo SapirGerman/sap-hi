@@ -32,7 +32,7 @@ const translations = {
       badge: "#HIRING",
       title: "GenAI all the way and beyond",
       subtitle:
-        "Transforming recruitment with cutting-edge AI technology and human intelligence. I help organizations find the right talent using advanced generative AI solutions and data-driven insights.",
+        "Blending cutting-edge AI with genuine human connection. I help organizations hire the right talent by combining advanced generative AI tools with high-touch conversations that reveal true fit.",
       connect: "Let's Connect",
       linkedin: "View LinkedIn",
     },
