@@ -8,7 +8,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Sap.Hi - AI-Powered Recruitment Excellence | GenAI Recruitment Specialist",
+  title: "Sap.Hi – AI-Powered Recruitment Platform | GenAI Recruitment Specialist",
   description:
     "Transform your hiring with AI-powered recruitment solutions. Sapir German combines human intelligence with cutting-edge generative AI to help organizations build exceptional teams. Expert in AI strategy consulting, talent acquisition, and executive search.",
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     alternateLocale: ["he_IL"],
     url: "https://www.sapirgerman.com",
     siteName: "Sap.Hi - AI Recruitment Excellence",
-    title: "Sap.Hi - AI-Powered Recruitment Excellence | GenAI Recruitment Specialist",
+    title: "Sap.Hi – AI-Powered Recruitment Platform | GenAI Recruitment Specialist",
     description:
       "Transform your hiring with AI-powered recruitment solutions. Expert in generative AI, talent acquisition, and executive search services.",
     images: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sap.Hi - AI-Powered Recruitment Excellence",
+    title: "Sap.Hi – AI-Powered Recruitment Platform",
     description:
       "Transform your hiring with AI-powered recruitment solutions. Expert in generative AI, talent acquisition, and executive search services.",
     images: ["/sapir-logo.png"],

@@ -33,63 +33,81 @@ const translations = {
       badge: "#HIRING",
       title: "GenAI all the way and beyond",
       subtitle:
-        "Transforming recruitment with cutting-edge AI technology and human intelligence. I help organizations find the right talent using advanced generative AI solutions and data-driven insights.",
+        "Recruitment for GenAI roles, combined with an AI-powered system that accelerates the hiring process end to end. Precise matching between candidates and roles, structured candidate profiles, and a clear, organized process that enables companies to make faster decisions with greater confidence.",
       connect: "Let's Connect",
       linkedin: "View LinkedIn",
     },
     about: {
-      title: "AI-Powered Recruitment Excellence",
+      title: "AI-Powered Recruitment Platform",
       subtitle:
         "Combining deep expertise in artificial intelligence with proven recruitment strategies to deliver exceptional results for forward-thinking organizations.",
-      genai: "GenAI Expertise",
+      genai: "AI-Powered Screening & Interviews",
       genaiDesc:
-        "Leveraging cutting-edge generative AI to revolutionize talent acquisition and candidate matching processes.",
-      strategic: "Strategic Recruitment",
+        "Automated initial interviews with an AI avatar, including candidate video profiles for fast and consistent first impressions.",
+      strategic: "Smart Matching with Fit Scores",
       strategicDesc:
-        "Building high-performing teams through data-driven insights and personalized recruitment strategies.",
-      results: "Results-Driven",
+        "AI-driven matching between candidates and roles, with clear fit scores to support better decision-making.",
+      results: "Intuitive End-to-End Experience",
       resultsDesc:
-        "Delivering measurable outcomes with faster hiring cycles and improved candidate quality through AI optimization.",
+        "A clean, user-friendly interface that makes it easy to manage the entire hiring process from start to finish.",
     },
     services: {
-      title: "Comprehensive AI Recruitment Services",
-      subtitle: "From strategy development to implementation, I provide end-to-end AI-powered recruitment solutions.",
+      title: "Recruitment Services",
+      subtitle: "Specialized recruitment for GenAI, AI infrastructure, and technical leadership roles.",
       servicesList: [
         {
-          title: "AI Strategy Consulting",
+          title: "Specialized Search for GenAI & AI Roles",
           description:
-            "Develop comprehensive AI recruitment strategies tailored to your organization's unique needs and goals.",
-          features: ["Custom AI Implementation", "Process Optimization", "ROI Analysis"],
+            "Targeted search for the technical talent behind AI products, including founding engineers, AI engineers, research talent, infrastructure, and product-focused hires.",
+          features: ["Founding Engineers", "AI Engineers", "Research Talent"],
         },
         {
-          title: "Talent Acquisition",
+          title: "Technical Leadership & Executive Search",
           description:
-            "Find and attract top-tier candidates using advanced AI matching algorithms and predictive analytics.",
-          features: ["AI-Powered Matching", "Candidate Scoring", "Automated Screening"],
+            "Search for critical leadership roles including VP R&D, CTO, Head of AI, and other senior technical hires who shape product and team direction.",
+          features: ["VP R&D", "CTO", "Head of AI"],
         },
         {
-          title: "Executive Search",
+          title: "Strategic Hiring Partner",
           description:
-            "Specialized executive recruitment leveraging AI insights for C-level and senior leadership positions.",
-          features: ["Leadership Assessment", "Cultural Fit Analysis", "Succession Planning"],
-        },
-        {
-          title: "Team Building",
-          description:
-            "Build cohesive, high-performing teams through AI-driven team composition and dynamics analysis.",
-          features: ["Team Optimization", "Skills Gap Analysis", "Performance Prediction"],
-        },
-        {
-          title: "Recruitment Automation",
-          description: "Streamline your hiring process with intelligent automation and workflow optimization.",
-          features: ["Process Automation", "Workflow Design", "Integration Support"],
-        },
-        {
-          title: "Training & Development",
-          description: "Upskill your recruitment team with AI tools and methodologies for maximum effectiveness.",
-          features: ["AI Tool Training", "Best Practices", "Ongoing Support"],
+            "Support beyond sourcing, including role definition, market mapping, candidate calibration, and hands-on partnership throughout the hiring process.",
+          features: ["Role Definition", "Market Mapping", "Candidate Calibration"],
         },
       ],
+    },
+    howIWork: {
+      title: "How I Work",
+      steps: [
+        {
+          number: "1",
+          title: "Define and calibrate the role",
+          description: "We start by sharpening the role scope, seniority, must-have capabilities, and success profile. I work closely with the hiring team to align on the ideal candidate profile before the search begins.",
+        },
+        {
+          number: "2",
+          title: "Map the market and launch the search",
+          description: "I identify the most relevant talent pools and build a focused search strategy based on the company's stage, role priorities, and market realities.",
+        },
+        {
+          number: "3",
+          title: "Stay closely aligned throughout the process",
+          description: "I maintain a close pulse on both candidates and the company throughout the search. We stay in regular contact, hold weekly check-ins, and continuously refine the profile based on market feedback, candidate quality, and interview insights.",
+        },
+        {
+          number: "4",
+          title: "Present high-fit candidates and support through close",
+          description: "I introduce candidates who are aligned both technically and strategically, and remain hands-on throughout the process — from calibration and candidate engagement to process management and closing.",
+        },
+      ],
+    },
+    readyToHire: {
+      title: "Ready to hire for your AI team?",
+      subtitle: "Whether you're making your first founding hire or scaling an established AI organization, I'd be happy to hear more about the role and how I can help.",
+    },
+    onAir: {
+      title: "On Air",
+      description: "In addition to my work in AI and technical recruitment, I also cover technology and innovation as a news presenter on The Economy Channel. I host \"Hakol Anashim\" (\"All People\"), a show exploring the transformation of work, leadership, and technology in the GenAI era.",
+      cta: "If you're a founder, researcher, or industry expert with a meaningful perspective on the AI shift we're living through, I'd be happy to connect regarding potential interviews and conversations.",
     },
     expertise: {
       title: "Industry Expertise & Technologies",
@@ -182,7 +200,7 @@ const translations = {
       badge: "#מגייסת",
       title: "בינה מלאכותית גנרטיבית עד הסוף ומעבר לכך",
       subtitle:
-        "שינוי תהליכי הגיוס באמצעות טכנולוגיית בינה מלאכותית מתקדמת ואינטליגנציה אנושית. אני עוזרת לארגונים למצוא את הכישרון הנכון באמצעות פתרונות בינה מלאכותית גנרטיבית ותובנות מונעות נתונים.",
+        "אני מתמחה בעזרה לסטארטאפים וחברות טכנולוגיה לגייס כישרונות יוצאי דופן בתחומי GenAI, תשתיות AI ומנהיגות טכנית. מגיוס צוות מייסדים ועד הרחבת ארגוני AI מבוססים, אני שותפה מקרוב עם חברות למציאת האנשים שבאמת בונים מוצרי AI מצוינים.",
       connect: "בואו נתחבר",
       linkedin: "צפה בלינקדאין",
     },
@@ -199,40 +217,59 @@ const translations = {
         "מתן תוצאות מדידות עם מחזורי גיוס מהירים יותר ושיפור איכות המועמדים באמצעות אופטימיזציה של בינה מלאכותית.",
     },
     services: {
-      title: "שירותי גיוס מקיפים מונעי בינה מלאכותית",
-      subtitle: "מפיתוח אסטרטגיה ועד יישום, אני מספקת פתרונות גיוס מקצה לקצה המונעים על ידי בינה מלאכותית.",
+      title: "שירותי גיוס",
+      subtitle: "גיוס מתמחה לתפקידי GenAI, תשתיות AI ומנהיגות טכנית.",
       servicesList: [
         {
-          title: "ייעוץ אסטרטגיית בינה מלאכותית",
-          description: "פיתוח אסטרטגיות גיוס בינה מלאכותית מקיפות המותאמות לצרכים ויעדים הייחודיים של הארגון שלכם.",
-          features: ["יישום בינה מלאכותית מותאם", "אופטימיזציה של תהליכים", "ניתוח החזר השקעה"],
+          title: "חיפוש מתמחה לתפקידי GenAI ו-AI",
+          description: "חיפוש ממוקד לכישרונות הטכניים מאחורי מוצרי AI, כולל מהנדסים מייסדים, מהנדסי AI, כישרונות מחקר, תשתיות וגיוסים ממוקדי מוצר.",
+          features: ["מהנדסים מייסדים", "מהנדסי AI", "כישרונות מחקר"],
         },
         {
-          title: "רכישת כישרונות",
-          description: "מציאה ומשיכה של מועמדים מהשורה הראשונה באמצעות אלגוריתמי התאמה מתקדמים ואנליטיקה חזויה.",
-          features: ["התאמה מונעת בינה מלאכותית", "ניקוד מועמדים", "סינון אוטומטי"],
+          title: "מנהיגות טכנית וחיפוש בכירים",
+          description: "חיפוש תפקידי מנהיגות קריטיים כולל VP R&D, CTO, Head of AI ומנהלים טכניים בכירים אחרים שמעצבים את כיוון המוצר והצוות.",
+          features: ["VP R&D", "CTO", "Head of AI"],
         },
         {
-          title: "חיפוש בכירים",
-          description: "גיוס בכירים מתמחה המנצל תובנות בינה מלאכותית לתפקידי C-level והנהלה בכירה.",
-          features: ["הערכת מנהיגות", "ניתוח התאמה תרבותית", "תכנון רצף"],
-        },
-        {
-          title: "בניית צוותים",
-          description: "בניית צוותים מלוכדים ובעלי ביצועים גבוהים באמצעות ניתוח הרכב צוות ודינמיקה מונע בינה מלאכותית.",
-          features: ["אופטימיזציה של צוותים", "ניתוח פערי כישורים", "חיזוי ביצועים"],
-        },
-        {
-          title: "אוטומציה של גיוס",
-          description: "ייעול תהליך הגיוס שלכם עם אוטומציה חכמה ואופטימיזציה של זרימת עבודה.",
-          features: ["אוטומציה של תהליכים", "עיצוב זרימת עבודה", "תמיכה באינטגרציה"],
-        },
-        {
-          title: "הכשרה ופיתוח",
-          description: "שדרוג כישורי צוות הגיוס שלכם עם כלי בינה מלאכותית ומתודולוגיות ליעילות מקסימלית.",
-          features: ["הכשרה בכלי בינה מלאכותית", "שיטות עבודה מומלצות", "תמיכה מתמשכת"],
+          title: "שותפת גיוס אסטרטגית",
+          description: "תמיכה מעבר לסורסינג, כולל הגדרת תפקיד, מיפוי שוק, כיול מועמדים ושותפות פעילה לאורך כל תהליך הגיוס.",
+          features: ["הגדרת תפקיד", "מיפוי שוק", "כיול מועמדים"],
         },
       ],
+    },
+    howIWork: {
+      title: "איך אני עובדת",
+      steps: [
+        {
+          number: "1",
+          title: "הגדרה וכיול התפקיד",
+          description: "אנחנו מתחילים בחידוד היקף התפקיד, הבכירות, היכולות החיוניות ופרופיל ההצלחה. אני עובדת בצמוד לצוות הגיוס ליישור על פרופיל המועמד האידיאלי לפני תחילת החיפוש.",
+        },
+        {
+          number: "2",
+          title: "מיפוי השוק והשקת החיפוש",
+          description: "אני מזהה את מאגרי הכישרונות הרלוונטיים ביותר ובונה אסטרטגיית חיפוש ממוקדת על בסיס שלב החברה, עדיפויות התפקיד ומציאות השוק.",
+        },
+        {
+          number: "3",
+          title: "שמירה על יישור צמוד לאורך התהליך",
+          description: "אני שומרת על דופק קרוב הן על המועמדים והן על החברה לאורך החיפוש. אנחנו נשארים בקשר קבוע, מקיימים פגישות שבועיות ומשפרים את הפרופיל באופן מתמשך על בסיס משוב שוק, איכות מועמדים ותובנות ראיונות.",
+        },
+        {
+          number: "4",
+          title: "הצגת מועמדים מתאימים ותמיכה עד לסגירה",
+          description: "אני מציגה מועמדים שמיושרים הן טכנית והן אסטרטגית, ונשארת פעילה לאורך כל התהליך - מכיול ומעורבות מועמדים ועד ניהול תהליך וסגירה.",
+        },
+      ],
+    },
+    readyToHire: {
+      title: "מוכנים לגייס לצוות ה-AI שלכם?",
+      subtitle: "בין אם אתם מבצעים את הגיוס המייסד הראשון שלכם או מרחיבים ארגון AI מבוסס, אשמח לשמוע עוד על התפקיד וכיצד אוכל לעזור.",
+    },
+    onAir: {
+      title: "על המסך",
+      description: "בנוסף לעבודתי בגיוס AI וטכנולוגיה, אני גם מסקרת טכנולוגיה וחדשנות כמגישה בערוץ הכלכלה. אני מנחה את \"הכל אנשים\", תוכנית שחוקרת את השינוי בעבודה, מנהיגות וטכנולוגיה בעידן ה-GenAI.",
+      cta: "אם אתם מייסדים, חוקרים או מומחי תעשייה עם פרספקטיבה משמעותית על המהפכה של ה-AI שאנחנו חיים בה, אשמח להתחבר לגבי ראיונות ושיחות פוטנציאליות.",
     },
     expertise: {
       title: "מומחיות וטכנולוגיות בתעשייה",
@@ -929,70 +966,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Expertise Section */}
-      <section id="expertise" className="py-16 md:py-20 bg-muted/30">
+      {/* How I Work Section */}
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 md:mb-16 ${isRTL ? "text-right" : ""}`}>
             <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
-              {t.expertise.title}
+              {t.howIWork.title}
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              {t.expertise.subtitle}
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <div className={isRTL ? "text-right" : ""}>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-left">
-                {t.expertise.industries}
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                {(language === "he"
-                  ? t.expertise.industriesList
-                  : [
-                      "Technology & Software",
-                      "Financial Services",
-                      "Healthcare & Biotech",
-                      "Manufacturing",
-                      "Consulting",
-                      "Startups & Scale-ups",
-                      "E-commerce",
-                      "AI & Machine Learning",
-                    ]
-                ).map((industry, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <Zap className="h-4 w-4 text-accent flex-shrink-0" />
-                    <span className="text-sm md:text-base text-muted-foreground">{industry}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {t.howIWork.steps.map((step, index) => (
+              <Card key={index} className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 hover:cosmic-glow hover-lift">
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg md:text-xl">
+                      {step.number}
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className={isRTL ? "text-right" : ""}>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 text-left">
-                {t.expertise.technologies}
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                {(language === "he"
-                  ? t.expertise.techList
-                  : [
-                      "Large Language Models",
-                      "Natural Language Processing",
-                      "Predictive Analytics",
-                      "Machine Learning",
-                      "Computer Vision",
-                      "Automation Platforms",
-                      "Data Analytics",
-                      "AI Integration",
-                    ]
-                ).map((tech, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <Brain className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm md:text-base text-muted-foreground">{tech}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+                  <h3 className={`text-lg md:text-xl font-semibold text-foreground mb-3 ${isRTL ? "hebrew-text" : ""}`}>
+                    {step.title}
+                  </h3>
+                  <p className={`text-muted-foreground leading-relaxed text-sm md:text-base ${isRTL ? "hebrew-text" : ""}`}>
+                    {step.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -1041,6 +1041,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* On Air Section */}
+      <section className="py-16 md:py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-8 md:mb-12 ${isRTL ? "text-right" : ""}`}>
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              {t.onAir.title}
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="glass-effect border-primary/20">
+              <CardContent className="p-6 md:p-8">
+                <p className={`text-muted-foreground leading-relaxed text-base md:text-lg mb-6 ${isRTL ? "hebrew-text text-right" : ""}`}>
+                  {t.onAir.description}
+                </p>
+                <p className={`text-muted-foreground leading-relaxed text-base md:text-lg mb-6 ${isRTL ? "hebrew-text text-right" : ""}`}>
+                  {t.onAir.cta}
+                </p>
+                <div className={`flex flex-wrap items-center gap-4 ${isRTL ? "justify-end" : "justify-start"}`}>
+                  <Button variant="outline" asChild>
+                    <a href="https://www.youtube.com/@SapirGerman" target="_blank" rel="noopener noreferrer">
+                      <Youtube className={`h-5 w-5 ${isRTL ? "ml-2" : "mr-2"}`} />
+                      YouTube
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <a href="https://linkedin.com/in/sapir-german-705ba41b3" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className={`h-5 w-5 ${isRTL ? "ml-2" : "mr-2"}`} />
+                      LinkedIn
+                    </a>
+                  </Button>
+                  <a 
+                    href="https://www.youtube.com/watch?v=H2kPajbPI_w" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-1 transition-colors"
+                  >
+                    <img 
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon_button-7z9nvoOZ7qOjmNNBsSevMoiEJ5EEr4.jpg" 
+                      alt="Channel 10 Economy" 
+                      className="h-8 w-auto rounded"
+                    />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
@@ -1078,7 +1128,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-balance text-white leading-tight">
                 {language === "en" ? (
                   <>
-                    Ready to Transform Your{" "}
+                    Ready to hire for your{" "}
                     <span
                       style={{
                         background: "linear-gradient(to right, #ffffff, #e9d5ff, #ffffff)",
@@ -1088,15 +1138,15 @@ export default function Home() {
                         color: "#ffffff", // fallback color
                       }}
                     >
-                      Recruitment?
+                      AI team?
                     </span>
                   </>
                 ) : (
-                  <>{t.contact.title}</>
+                  <>{t.readyToHire.title}</>
                 )}
               </h2>
               <p className="text-lg sm:text-xl md:text-xl lg:text-2xl max-w-4xl mx-auto text-pretty leading-relaxed text-white/90">
-                {t.contact.subtitle}
+                {language === "en" ? t.readyToHire.subtitle : t.readyToHire.subtitle}
               </p>
             </div>
 
@@ -1141,7 +1191,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center justify-items-center">
+            {/* Silverfort */}
             <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-100">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-silverfort-logo-VSCyyQ49angFBuJSH6k37TxV9ztpCH.png"
@@ -1150,33 +1201,8 @@ export default function Home() {
                 style={{ background: "transparent" }}
               />
             </div>
+            {/* Monday.com */}
             <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-200">
-              <svg
-                width="120"
-                height="48"
-                viewBox="0 0 120 48"
-                className="max-h-10 md:max-h-12 w-auto"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Lightning bolt icon */}
-                <path d="M20 8L12 24h8l-8 16 16-20h-8l8-12z" fill="#FFD700" stroke="#FFA500" strokeWidth="0.5" />
-                <text
-                  x="32"
-                  y="32"
-                  fontFamily="Arial, sans-serif"
-                  fontSize="24"
-                  fontWeight="900"
-                  letterSpacing="1px"
-                  style={{
-                    fill: "#000000",
-                    color: "#000000",
-                  }}
-                >
-                  BOLT
-                </text>
-              </svg>
-            </div>
-            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-300">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-monday-logo-GFe2I0AMce31Q2ihNfrafICb7HneZt.png"
                 alt="Monday.com"
@@ -1184,7 +1210,8 @@ export default function Home() {
                 style={{ background: "transparent" }}
               />
             </div>
-            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-400">
+            {/* Lightricks */}
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-300">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/png-transparent-lightricks-logo-r2iO7Vk530ySZPcLq7FtnzFPJlSEQf.png"
                 alt="Lightricks"
@@ -1192,38 +1219,35 @@ export default function Home() {
                 style={{ background: "transparent" }}
               />
             </div>
+            {/* Coralogix */}
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-400">
+              <svg width="140" height="40" viewBox="0 0 140 40" className="max-h-10 md:max-h-12 w-auto">
+                <text x="0" y="28" fontFamily="Arial, sans-serif" fontSize="22" fontWeight="700" fill="#1a1a1a">
+                  Coralogix
+                </text>
+              </svg>
+            </div>
+            {/* Sett.ai */}
             <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-500">
-              <svg
-                width="120"
-                height="48"
-                viewBox="0 0 120 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="max-h-10 md:max-h-12 w-auto"
-              >
-                {/* Blue background blocks */}
-                <rect x="0" y="0" width="30" height="24" fill="#0066CC" />
-                <rect x="30" y="0" width="30" height="24" fill="#0066CC" />
-                <rect x="60" y="0" width="30" height="24" fill="#0066CC" />
-                <rect x="90" y="0" width="30" height="24" fill="#0066CC" />
-                <rect x="0" y="24" width="30" height="24" fill="#0066CC" />
-                <rect x="30" y="24" width="30" height="24" fill="#0066CC" />
-                <rect x="60" y="24" width="30" height="24" fill="#0066CC" />
-                <rect x="90" y="24" width="30" height="24" fill="#0066CC" />
-
-                <text
-                  x="60"
-                  y="32"
-                  textAnchor="middle"
-                  fontSize="18"
-                  fontWeight="bold"
-                  fontFamily="Arial, sans-serif"
-                  style={{
-                    fill: "#000000",
-                    color: "#000000",
-                  }}
-                >
-                  KPMG
+              <svg width="100" height="40" viewBox="0 0 100 40" className="max-h-10 md:max-h-12 w-auto">
+                <text x="0" y="28" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="700" fill="#1a1a1a">
+                  sett.ai
+                </text>
+              </svg>
+            </div>
+            {/* Decart AI */}
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-600">
+              <svg width="120" height="40" viewBox="0 0 120 40" className="max-h-10 md:max-h-12 w-auto">
+                <text x="0" y="28" fontFamily="Arial, sans-serif" fontSize="22" fontWeight="700" fill="#1a1a1a">
+                  Decart AI
+                </text>
+              </svg>
+            </div>
+            {/* Immunai */}
+            <div className="flex items-center justify-center min-h-16 md:min-h-20 w-full max-w-32 md:max-w-40 p-3 md:p-4 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 animate-pulse hover:animate-none hover:scale-110 animation-delay-700">
+              <svg width="120" height="40" viewBox="0 0 120 40" className="max-h-10 md:max-h-12 w-auto">
+                <text x="0" y="28" fontFamily="Arial, sans-serif" fontSize="22" fontWeight="700" fill="#1a1a1a">
+                  Immunai
                 </text>
               </svg>
             </div>

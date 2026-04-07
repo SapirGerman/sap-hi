@@ -25,7 +25,7 @@ A modern, cosmic-themed website for Sapir German, an AI recruitment specialist. 
 
 ## 📁 Project Structure
 
-```
+\`\`\`
 ├── app/
 │   ├── globals.css           # Global styles and design tokens
 │   ├── layout.tsx            # Root layout with theme provider
@@ -56,7 +56,7 @@ A modern, cosmic-themed website for Sapir German, an AI recruitment specialist. 
     ├── placeholder.jpg
     ├── placeholder.svg
     └── professional-woman-ai-consultant-headshot.jpg
-```
+\`\`\`
 
 ## 🎨 Design System
 
@@ -80,31 +80,31 @@ A modern, cosmic-themed website for Sapir German, an AI recruitment specialist. 
 ### Installation
 
 1. Clone the repository:
-```bash
+\`\`\`bash
 git clone https://github.com/SapirGerman/sap-hi.git
 cd sap-hi
-```
+\`\`\`
 
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 3. Run the development server:
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ### Development Commands
 
-```bash
+\`\`\`bash
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
-```
+\`\`\`
 
 ## 📱 Responsive Breakpoints
 
